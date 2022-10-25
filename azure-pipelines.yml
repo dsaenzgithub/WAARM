@@ -19,6 +19,6 @@ steps:
     resourceGroupName: 'GRA'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/dsaenzgithub/WAARM/stagin/azuredeploy.json'
-    csmParametersFileLink: 'https://raw.githubusercontent.com/dsaenzgithub/WAARM/stagin/azuredeploy.parameters.json'
+    csmFileLink: 'https://raw.githubusercontent.com/dsaenzgithub/WAARM/main/azuredeploy.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/dsaenzgithub/WAARM/main/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
