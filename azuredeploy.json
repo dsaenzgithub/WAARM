@@ -81,10 +81,10 @@
               "name": "[variables('stickyAppSettingName')]",
               "value": "value"
             }
-          ]
+          ],
           "javaVersion": "1.11",
           "javaContainer": "TOMCAT",
-          "javaContainerVersion": "9.0",
+          "javaContainerVersion": "9.0"
         }
       },
       "dependsOn": [
