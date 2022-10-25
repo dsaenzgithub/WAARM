@@ -87,41 +87,6 @@
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
       ]
-    },
-    {
-      "apiVersion": "2020-06-01",
-      "type": "Microsoft.Web/sites/slots",
-      "name": "[concat(variables('webAppPortalName'), '/', parameters('environments')[copyIndex()])]",
-      "kind": "app",
-      "location": "[parameters('location')]",
-      "comments": "This specifies the web app slots.",
-      "tags": {
-        "displayName": "WebAppSlots"
-      },
-      "properties": {
-        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
-      },
-      "dependsOn": [
-        "[resourceId('Microsoft.Web/Sites', variables('webAppPortalName'))]"
-      ],
-      "copy": {
-        "name": "webPortalSlot",
-        "count": "[length(parameters('environments'))]"
-      }
-    },
-    {
-      "apiVersion": "2020-06-01",
-      "name": "[concat(variables('webAppPortalName'), '/slotconfignames')]",
-      "type": "Microsoft.Web/sites/config",
-      "comments": "This specifies the sticky (slot setting) application settings.",
-      "dependsOn": [
-        "[resourceId('Microsoft.Web/Sites', variables('webAppPortalName'))]"
-      ],
-      "properties": {
-        "appSettingNames": [
-          "[variables('stickyAppSettingName')]"
-        ]
-      }
     }
   ]
 }
