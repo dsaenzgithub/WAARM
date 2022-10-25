@@ -19,5 +19,5 @@ steps:
     resourceGroupName: 'GRA'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://github.com/dsaenzgithub/WAARM.git'
+    csmFileLink: '"https://github.com/dsaenzgithub/WAARM.git"'
     deploymentMode: 'Incremental'
