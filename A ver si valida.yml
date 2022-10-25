@@ -20,5 +20,6 @@ steps:
     location: 'West Europe'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/dsaenzgithub/WAARM/main/azuredeploy.json'
+    csmParametersFile: 'https://raw.githubusercontent.com/dsaenzgithub/WAARM/main/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
 
