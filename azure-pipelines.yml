@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'CISTEC-INNOVATION-LAB (18179fd4-342d-4db2-935a-e496aafce30c)-1329'
+    subscriptionId: '18179fd4-342d-4db2-935a-e496aafce30c'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'GRA'
+    location: 'West Europe'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/dsaenzgithub/WAARM/main/azuredeploy.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/dsaenzgithub/WAARM/main/azuredeploy.parameters.json'
+    deploymentMode: 'Incremental'
