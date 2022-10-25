@@ -71,9 +71,6 @@
       },
       "properties": {
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]",
-        "javaVersion": "1.11",
-        "javaContainer": "TOMCAT",
-        "javaContainerVersion": "9.0",
         "siteConfig": {
           "appSettings": [
             {
@@ -85,6 +82,9 @@
               "value": "value"
             }
           ]
+          "javaVersion": "1.11",
+          "javaContainer": "TOMCAT",
+          "javaContainerVersion": "9.0",
         }
       },
       "dependsOn": [
