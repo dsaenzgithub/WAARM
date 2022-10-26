@@ -31,7 +31,7 @@
     },
     "location": {
       "type": "string",
-      "defaultValue": "[resourceGroup().location]",
+      "defaultValue": "France Central",
       "metadata": {
         "description": "Location for all resources."
       }
@@ -56,8 +56,14 @@
       },
       "properties": {},
       "sku": {
-        "name": "P1v2"
+        "type": "String",
+        "value": "PremiumV2"
+      },
+      "skuCode": {
+        "type": "String",
+        "value": "P1v2"
       }
+      
     },
     {
       "apiVersion": "2020-06-01",
@@ -81,15 +87,18 @@
               "name": "[variables('stickyAppSettingName')]",
               "value": "value"
             }
-          ],
-          "javaContainer": "JAVASE",               
-          "javaVersion" : "1.11"       
-        }
+          ]
+          },
+        "linuxFxVersion": {
+          "type": "String",
+          "value": "JAVA|11-java11"
+          }       
+        
       },
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
       ]
-    },
+    }
     {
       "apiVersion": "2020-06-01",
       "type": "Microsoft.Web/sites/slots",
