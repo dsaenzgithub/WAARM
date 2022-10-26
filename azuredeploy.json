@@ -82,7 +82,8 @@
               "value": "value"
             }
           ],
-          "javaVersion": "1.11"                 
+          "javaContainer": "JAVASE",               
+          "javaVersion" : "1.11"       
         }
       },
       "dependsOn": [
