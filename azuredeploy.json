@@ -56,7 +56,7 @@
       },
       "properties": {},
       "sku": {
-        "name": "[if(lessOrEquals(length(parameters('environments')), variables('standardPlanMaxAdditionalSlots')), 'S1', 'P1')]"
+        "name": "[P1v2]"
       }
     },
     {
