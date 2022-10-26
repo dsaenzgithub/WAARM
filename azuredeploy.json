@@ -57,10 +57,6 @@
       "properties": {        
       "sku": {
         "type": "String",
-        "value": "PremiumV2"
-      },
-      "skuCode": {
-        "type": "String",
         "value": "P1v2"
             }      
       }
