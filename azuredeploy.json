@@ -54,9 +54,15 @@
       "tags": {
         "displayName": "AppServicePlan"
       },
-      "properties": {},
+      "properties": {        
       "sku": {
-        "name": "[if(lessOrEquals(length(parameters('environments')), variables('standardPlanMaxAdditionalSlots')), 'S1', 'P1')]"
+        "type": "String",
+        "value": "PremiumV2"
+      },
+      "skuCode": {
+        "type": "String",
+        "value": "P1v2"
+            }      
       }
     },
     {
@@ -82,7 +88,10 @@
               "value": "value"
             }
           ],
-          "javaVersion": "1.11"                 
+          "linuxFxVersion": {
+             "type": "String",
+             "value": "JAVA|11-java11"
+      }                 
         }
       },
       "dependsOn": [
