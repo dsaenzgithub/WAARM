@@ -87,7 +87,11 @@
           "linuxFxVersion": {
              "type": "String",
              "value": "JAVA|11-java11"
-      }                 
+           },
+          "sku": {
+             "type": "String",
+              "value": "P1v2"
+            }    
         }
       },
       "dependsOn": [
