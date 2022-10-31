@@ -18,6 +18,7 @@ pool:
             dsaenz@cistec.es
          instructions: 'Please validate the build configuration and resume'
          onTimeout: 'resume'
+         
     - task: AzureResourceManagerTemplateDeployment@3
       inputs:
       deploymentScope: 'Resource Group'
