@@ -5,7 +5,7 @@
     "baseResourceName": {
       "value": "java5git"
     },
-    "linuxFxVersion": {
+    "linuxFxVersion": { 
         "value": "JAVA|11-java11"
     },
     "appSettingName": {
