@@ -86,8 +86,8 @@
               "value": "value"
             }
           ],
-          "javaContainer": "JAVA SE",
-          "javaVersion": "JAVA 11"
+          "javaContainer": "Java SE",
+          "javaVersion": "Java 11"
          }
                
       },
