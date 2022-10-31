@@ -87,7 +87,7 @@
             }
           ],
           "javaContainer": "TOMCAT",
-          "javaContainerVersion":"9.0"
+          "javaContainerVersion":"9.0",
           "javaVersion": "java11"
          }
                
