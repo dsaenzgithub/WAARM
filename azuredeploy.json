@@ -72,11 +72,7 @@
             {
               "name": "[parameters('appSettingName')]",
               "value": "value"
-            },
-            {
-              "name": "[variables('stickyAppSettingName')]",
-              "value": "value"
-            }
+            }        
           ],
           "linuxFxVersion": "[parameters('linuxFxVersion')]"
         }
