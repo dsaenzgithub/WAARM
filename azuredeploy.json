@@ -86,11 +86,10 @@
               "value": "value"
             }
           ],
-          "javaContainer": "TOMCAT",
-          "javaContainerVersion":"9.0",
-          "javaVersion": "Java 11"
-         }
-               
+          "linuxFxVersion": "JAVA|11-java11"
+        }
+          
+            
       },
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
