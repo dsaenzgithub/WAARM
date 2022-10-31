@@ -86,8 +86,9 @@
               "value": "value"
             }
           ],
-          "javaContainer": "Java SE",
-          "javaVersion": "Java 11"
+          "javaContainer": "TOMCAT",
+          "javaContainerVersion":"9.0"
+          "javaVersion": "java11"
          }
                
       },
