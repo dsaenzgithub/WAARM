@@ -51,7 +51,9 @@
       "tags": {
         "displayName": "AppServicePlan"
       },
-      "properties": { }
+      "properties": {
+        "reserved": true
+       }
     },
     {
       "apiVersion": "2022-03-01",
