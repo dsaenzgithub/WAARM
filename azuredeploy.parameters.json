@@ -5,6 +5,9 @@
     "baseResourceName": {
       "value": "java5git"
     },
+    "linuxFxVersion": {
+        "value": "JAVA|11-java11"
+    },
     "appSettingName": {
       "value": "con_staging"
     }

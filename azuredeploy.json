@@ -86,7 +86,7 @@
               "value": "value"
             }
           ],
-          "linuxFxVersion": "JAVA|11-java11"
+          "linuxFxVersion": "[parameters('linuxFxVersion')]"
         }
           
             
