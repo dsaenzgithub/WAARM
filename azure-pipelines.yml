@@ -10,7 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
   steps:
-    
    - task: ManualValidation@0
      timeoutInMinutes: 1440 # task times out in 1 day
      inputs:
@@ -19,7 +18,7 @@ pool:
          instructions: 'Please validate the build configuration and resume'
          onTimeout: 'resume'
          
-    - task: AzureResourceManagerTemplateDeployment@3
+   - task: AzureResourceManagerTemplateDeployment@3
       inputs:
       deploymentScope: 'Resource Group'
       azureResourceManagerConnection: 'CISTEC-INNOVATION-LAB (18179fd4-342d-4db2-935a-e496aafce30c)-1329'
