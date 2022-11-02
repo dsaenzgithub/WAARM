@@ -9,13 +9,36 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
 
+  jobs:
+  - job: waitForValidation
+    displayName: Wait for external validation
+    pool: server
+    timeoutInMinutes: 4320 # job times out in 3 days
+    steps:
+    - task: ManualValidation@0
+      timeoutInMinutes: 1440 # task times out in 1 day
+      inputs:
+        notifyUsers: |
+          dsaenz@cistec.es
+        instructions: 'Please validate the build configuration and resume'
+        onTimeout: 'resume'
 
-  - task: ManualValidation@0
-     timeoutInMinutes: 1440 # task times out in 1 day
-     inputs:
-         notifyUsers: 
-            dsaenz@cistec.es
-         instructions: 'Please validate the build configuration and resume'
-         onTimeout: 'resume'
+  - job: Despliega ARM Linux WEbApp
+    displayName: Despliega ARM Linux WEbApp
+    steps:
+    - task: AzureResourceManagerTemplateDeployment@3
+      inputs:
+      deploymentScope: 'Resource Group'
+      azureResourceManagerConnection: 'CISTEC-INNOVATION-LAB (18179fd4-342d-4db2-935a-e496aafce30c)-1329'
+      subscriptionId: '18179fd4-342d-4db2-935a-e496aafce30c'
+      action: 'Create Or Update Resource Group'
+      resourceGroupName: 'GRA'
+      location: 'West Europe'
+      templateLocation: 'URL of the file'
+      csmFileLink: 'https://raw.githubusercontent.com/dsaenzgithub/WAARM/main/azuredeploy.json'
+      csmParametersFileLink: 'https://raw.githubusercontent.com/dsaenzgithub/WAARM/main/azuredeploy.parameters.json'
+      deploymentMode: 'Incremental'
+
+      
+
